@@ -43,11 +43,8 @@ function HeroSection({
                 >
                   {description}
                 </p>
-                <Link to="/">
-                  <Button
-                    buttonSize="btn--wide"
-                    buttonColor={imgStart === "" ? "blue" : "red"}
-                  >
+                <Link to="/sign-up">
+                  <Button buttonSize="btn--wide" buttonColor="blue">
                     {buttonLabel}
                   </Button>
                 </Link>

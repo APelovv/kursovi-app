@@ -28,14 +28,16 @@ function Navbar() {
   return (
     <>
       <IconContext.Provider value={{ color: "fff" }}>
-        <div className="navbar">
+        <nav className="navbar">
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
               University Degree
             </Link>
+
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </div>
+
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
                 <Link to="/" className="nav-links" onClick={closeMobileMenu}>
@@ -60,7 +62,7 @@ function Navbar() {
                   Contact
                 </Link>
               </li>
-              <li className="nav-btn" onClick={handleClick}>
+              <li className="nav-btn">
                 {button ? (
                   <Link to="/" className="btn-link">
                     <Button buttonStyle="btn--outline">Sign up</Button>
@@ -75,7 +77,7 @@ function Navbar() {
               </li>
             </ul>
           </div>
-        </div>
+        </nav>
       </IconContext.Provider>
     </>
   );
